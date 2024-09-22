@@ -1,28 +1,52 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Register Employee</title>
+    <title>Servlet</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #fdf5e6;
+        }
+    </style>
 </head>
 <body>
-<h2>Register Employee</h2>
-<form action="${pageContext.request.contextPath}/employee" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="phoneNumber">Phone Number:</label>
-    <input type="text" id="phoneNumber" name="phoneNumber" required><br><br>
-
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <input type="submit" value="Register">
-</form>
+<h1 style="margin-top:30px;"><center><b>Register</b></center></h1>
+<div class="container">
+    <form action="register" method="post">
+        <div class="row">
+            <div class="col" style="margin-top:10px;">
+                <label for="firstName"><b>First Name</b></label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" required>
+            </div>
+            <div class="col" style="margin-top:10px;">
+                <label for="lastName"><b>Last Name</b></label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6" style="margin-top:10px;">
+                <label for="inputEmail"><b>Email</b></label>
+                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group col-md-6" style="margin-top:10px;">
+                <label for="inputPassword"><b>Password</b></label>
+                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6" style="margin-top:10px;">
+                <label for="inputUsername"><b>Username</b></label>
+                <input type="text" class="form-control" id="inputUsername" name="username" placeholder="Username" required>
+            </div>
+        </div>
+        <div class="form-group" style="margin-top:10px;">
+            <label for="inputMobileNumber"><b>Mobile Number</b></label>
+            <input type="number" class="form-control" id="inputMobileNumber" name="mobileNumber" placeholder="Mobile number" required>
+        </div>
+        <center><button type="submit" class="btn btn-dark" style="margin-top:10px;"><b>Submit</b></button></center>
+    </form>
+</div>
 </body>
 </html>

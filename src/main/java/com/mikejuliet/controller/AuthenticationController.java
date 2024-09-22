@@ -18,6 +18,16 @@ public class AuthenticationController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if ("logout".equals(action) || request.getRequestURI().endsWith("/logout")) {
+            doLogout(request, response);
+        } else {
+            doLogin(request, response);
+        }
+    }
+
+
+    private void doLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
@@ -38,5 +48,10 @@ public class AuthenticationController extends HttpServlet {
             request.setAttribute("errorMessage", "An error occurred during authentication: " + e.getMessage());
             request.getRequestDispatcher("/login.jsp").forward(request, response); // Forward back to login page with error message
         }
+    }
+
+    private void doLogout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getSession().invalidate(); // Invalidate the session
+        response.sendRedirect(request.getContextPath() + "/login.jsp"); // Redirect to login page
     }
 }

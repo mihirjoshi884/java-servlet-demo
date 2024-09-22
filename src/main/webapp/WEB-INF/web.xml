@@ -22,10 +22,15 @@
         <servlet-name>AuthController</servlet-name>
         <servlet-class>com.mikejuliet.controller.AuthenticationController</servlet-class>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>AuthController</servlet-name>
         <url-pattern>/auth/*</url-pattern>
-    </servlet-mapping>d
+    </servlet-mapping>
 
-
+    <!-- Optional: Explicit mapping for logout action -->
+    <servlet-mapping>
+        <servlet-name>AuthController</servlet-name>
+        <url-pattern>/auth/logout</url-pattern>
+    </servlet-mapping>
 </web-app>
