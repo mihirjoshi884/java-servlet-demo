@@ -56,6 +56,18 @@
             justify-content: space-around;
             margin-top: 20px;
         }
+
+        #footer{
+            position: fixed;
+            text-align: center;
+            padding: 15px;
+            background-color: Darksalmon;
+            color: white;
+            height: 250px;
+            width: 100%;
+            bottom: 0;
+            font-size: 35px;
+        }
     </style>
 </head>
 <body>
@@ -125,27 +137,35 @@
     </div>
 </div>
 
-<footer>
-    <div class="container">
-        <div class="column">
-            <center>
-                <ul>
-                    <li><h3><b>Astha Singh</b> - 24MCA10048</h3></li>
-                    <li><h3><b>Mihir Joshi</b> - 24MCA10049</h3></li>
-                </ul>
-            </center>
+<div id="footer">
+    <ol type = " ">
+        <ul>
+            <li><h3><b>Astha Singh</b> - 24MCA10048</h3></li>
 
-        </div>
-        <div class="column">
-            <center>
-                <ul>
-                    <li><h3><b>Saurav Sevda</b> - 24MCA10054</h3></li>
-                    <li><h3><b>Rishab Singh</b> - 24MCA10057</h3></li>
-                </ul>
-            </center>
-        </div>
-    </div>
-</footer>
+        </ul>
+
+        <ul>
+            <li><h3><b>Mihir Joshi</b> - 24MCA10049</h3></li>
+
+        </ul>
+    </ol>
+    <ol>
+        <ul>
+            <li><h3><b>Saurav Sevda</b> - 24MCA10054</h3></li>
+
+        </ul>
+        <ul>
+            <li><h3><b>Rishab Singh</b> - 24MCA10057</h3></li>
+
+        </ul>
+    </ol>
+
+
+</div>
+
+
+
+
 
 <script>
     let slideIndex = 1;
