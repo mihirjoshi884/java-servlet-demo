@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS Employee (
+    empId VARCHAR(50) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phoneNumber VARCHAR(15),
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL
+    );
